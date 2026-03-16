@@ -566,8 +566,8 @@
                             <p class="text-5xl md:text-6xl font-black tracking-tighter tabular-nums">4.800 €</p>
                             <p class="text-xs text-slate-400 mt-3 font-medium leading-relaxed">* Precio con descuento aplicado. Cubre la presencia en ambos vestuarios durante un mes completo.</p>
                         </div>
-                        <button class="w-full bg-blue-600 text-white font-black py-4 rounded-xl shadow-lg hover:bg-emerald-500 transition-all uppercase text-[10px] tracking-widest flex items-center justify-center gap-2 mt-auto">
-                            <i data-lucide="check-circle" class="w-4 h-4"></i> Aprobar Acción Comercial
+                        <button onclick="submitCampaignMeeting()" class="w-full bg-blue-600 text-white font-black py-4 rounded-xl shadow-lg hover:bg-emerald-500 transition-all uppercase text-[10px] tracking-widest flex items-center justify-center gap-2 mt-auto">
+                            <i data-lucide="calendar" class="w-4 h-4"></i> Programar reunión
                         </button>
                     </div>
                 </div>
@@ -736,6 +736,12 @@
             const items = Array.from(document.querySelectorAll('input[name="mkt-item"]:checked')).map(i => i.value).join(', ');
             const body = `SOLICITUD MARKETING BAVIERA\nCentros: ${document.getElementById('mkt-centers').value}\nRef: ${document.getElementById('mkt-ref-person').value}\nMateriales: ${items}`;
             window.location.href = `mailto:sofia.gortari@biotechhealthcare.com?subject=Mkt Support Baviera&body=${encodeURIComponent(body)}`;
+        }
+
+        function submitCampaignMeeting() {
+            const subject = encodeURIComponent("Propuesta Campaña Serrano - Solicitud de Reunión");
+            const body = encodeURIComponent("Hola,\n\nNos gustaría programar una reunión para hablar sobre la propuesta de la Campaña en David Lloyd Serrano.\n\nUn saludo.");
+            window.location.href = `mailto:carlos@biotechhealthcare.com,ly.garcia@biotechhealthcare.com?subject=${subject}&body=${body}`;
         }
     </script>
 </body>
