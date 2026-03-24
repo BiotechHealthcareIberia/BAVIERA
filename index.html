@@ -3,54 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Biotech | Dashboard Estratégico Baviera 2026</title>
+    <title>Biotech | Dashboard Integral Baviera 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #f8fafc; 
-            -webkit-font-smoothing: antialiased;
-        }
-
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; -webkit-font-smoothing: antialiased; }
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
-        
-        @keyframes fadeIn { 
-            from { opacity: 0; transform: translateY(10px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
-
-        .nav-btn.active { 
-            background-color: #2563eb; 
-            color: white; 
-            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2); 
-        }
-
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-btn.active { background-color: #2563eb; color: white; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%;
-            background: #2563eb; cursor: pointer; border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: -8px;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%; height: 4px; background: rgba(37, 99, 235, 0.1); border-radius: 2px;
-        }
-
-        .badge-promo {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-size: 9px;
-            font-weight: 800;
-            text-transform: uppercase;
-            border: 1px solid #bfdbfe;
-        }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #2563eb; cursor: pointer; border: 3px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: -8px; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: rgba(37, 99, 235, 0.1); border-radius: 2px; }
+        .badge-promo { background: #dbeafe; color: #1e40af; padding: 2px 8px; border-radius: 6px; font-size: 9px; font-weight: 800; text-transform: uppercase; border: 1px solid #bfdbfe; }
     </style>
 </head>
 <body class="text-slate-900 bg-slate-50 min-h-screen pb-20">
@@ -65,7 +32,7 @@
             </div>
             
             <nav class="flex bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200 overflow-x-auto no-scrollbar w-full lg:w-auto sticky top-4 z-40">
-                <button onclick="showTab('catalog')" id="btn-catalog" class="nav-btn active px-6 py-2.5 rounded-xl text-xs font-bold transition-all uppercase whitespace-nowrap">Tarifa 2026</button>
+                <button onclick="showTab('catalog')" id="btn-catalog" class="nav-btn active px-6 py-2.5 rounded-xl text-xs font-bold transition-all uppercase whitespace-nowrap">Tarifa Completa</button>
                 <button onclick="showTab('simulator')" id="btn-simulator" class="nav-btn px-6 py-2.5 rounded-xl text-xs font-bold text-slate-400 hover:bg-slate-50 transition-all uppercase whitespace-nowrap">Rappel Grupo</button>
                 <button onclick="showTab('campaign')" id="btn-campaign" class="nav-btn px-6 py-2.5 rounded-xl text-xs font-bold text-blue-600 bg-blue-50 border border-blue-100 uppercase whitespace-nowrap ml-2">Campaña Serrano</button>
             </nav>
@@ -75,18 +42,18 @@
             <div class="bg-white rounded-[40px] border border-slate-100 shadow-xl overflow-hidden">
                 <div class="p-6 md:p-8 border-b border-slate-50 bg-slate-50/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <h3 class="font-black text-2xl uppercase tracking-tighter text-slate-800 flex items-center gap-3">
-                        <i data-lucide="list-checks" class="text-blue-600"></i> Acuerdo de Precios Especial
+                        <i data-lucide="layout-grid" class="text-blue-600"></i> Catálogo y Tarifas 2026
                     </h3>
                     <div class="flex gap-2">
-                        <span class="badge-promo italic">Acuerdo Volumen > 600/1000 uds</span>
+                        <span class="badge-promo italic">Acuerdo Preferente Baviera</span>
                     </div>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse min-w-[800px]">
+                    <table class="w-full text-left border-collapse min-w-[850px]">
                         <thead class="bg-slate-50 border-b font-bold text-slate-400 uppercase tracking-widest text-[9px]">
                             <tr>
                                 <th class="p-6">Gama / Producto</th>
-                                <th class="p-6">Especificación Técnica / Condición</th>
+                                <th class="p-6">Especificación / Condición</th>
                                 <th class="p-6 text-right">Precio Neto Unitario</th>
                             </tr>
                         </thead>
@@ -101,11 +68,11 @@
             <div class="bg-slate-900 p-8 md:p-12 rounded-[40px] text-white shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px] -mr-20 -mt-20"></div>
                 <div class="relative z-10">
-                    <h2 class="text-4xl font-black mb-10 uppercase tracking-tighter">Cálculo de Rappel Anual 2026</h2>
+                    <h2 class="text-4xl font-black mb-10 uppercase tracking-tighter">Simulador de Rappel Anual</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-8">
                             <div>
-                                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Volumen de Facturación Estimado</p>
+                                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Consumo Estimado</p>
                                 <div class="flex items-baseline gap-2 mb-6">
                                     <span id="sales-val" class="text-7xl font-black tracking-tighter tabular-nums text-white">2.500.000</span>
                                     <span class="text-3xl font-bold text-blue-500">€</span>
@@ -113,14 +80,13 @@
                                 <input type="range" id="sales-slider" min="100000" max="5000000" step="50000" value="2500000" class="w-full" oninput="updateSim()">
                             </div>
                         </div>
-
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
-                                <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Tramo Alcanzado</p>
+                                <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Porcentaje</p>
                                 <p id="rappel-pct" class="text-4xl font-black text-blue-400 tabular-nums">5.0%</p>
                             </div>
                             <div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
-                                <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Abono Devengado</p>
+                                <p class="text-[10px] text-slate-500 uppercase font-black mb-2 tracking-widest">Abono Neto</p>
                                 <p id="rappel-total" class="text-4xl font-black text-emerald-400 tabular-nums">125.000 €</p>
                             </div>
                         </div>
@@ -129,97 +95,77 @@
             </div>
         </div>
 
-        <div id="campaign" class="tab-content space-y-6">
-            <div class="bg-white rounded-[40px] p-8 md:p-16 border border-slate-100 shadow-xl text-center relative overflow-hidden">
+        <div id="campaign" class="tab-content">
+            <div class="bg-white rounded-[40px] p-8 md:p-16 border border-slate-100 shadow-xl text-center">
                 <div class="max-w-2xl mx-auto">
                     <div class="w-20 h-20 bg-blue-600 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
                         <i data-lucide="target" class="w-10 h-10"></i>
                     </div>
                     <h2 class="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter">David Lloyd Serrano</h2>
-                    <p class="text-slate-500 text-lg mb-12 font-medium">Propuesta conjunta Biotech & Baviera para la captación de pacientes premium de cirugía refractiva con tecnología <span class="text-blue-600 font-bold">Eyecryl Phakic</span>.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                            <i data-lucide="calendar" class="w-5 h-5 mx-auto mb-3 text-slate-400"></i>
-                            <p class="text-[10px] font-black text-slate-400 uppercase mb-1">Duración</p>
-                            <p class="text-sm font-bold text-slate-900">1 Mes</p>
-                        </div>
-                        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                            <i data-lucide="map-pin" class="w-5 h-5 mx-auto mb-3 text-slate-400"></i>
-                            <p class="text-[10px] font-black text-slate-400 uppercase mb-1">Ubicación</p>
-                            <p class="text-sm font-bold text-slate-900">Vestuarios DL Serrano</p>
-                        </div>
-                        <div class="p-6 bg-blue-50 rounded-3xl border border-blue-100">
-                            <i data-lucide="credit-card" class="w-5 h-5 mx-auto mb-3 text-blue-400"></i>
-                            <p class="text-[10px] font-black text-blue-400 uppercase mb-1">Inversión</p>
-                            <p class="text-sm font-bold text-blue-700">100% Biotech</p>
-                        </div>
-                    </div>
-
+                    <p class="text-slate-500 text-lg mb-12 font-medium">Acción de marketing para captación de pacientes <span class="text-blue-600 font-bold">Eyecryl Phakic</span>.</p>
                     <div class="inline-flex flex-col p-10 bg-slate-900 text-white rounded-[40px] shadow-2xl">
-                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">Coste de Acción Especial</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-2">Presupuesto Cerrado</span>
                         <span class="text-5xl font-black tracking-tighter tabular-nums">4.800 €</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="mt-12 p-8 bg-white border border-slate-200 rounded-3xl flex flex-col md:flex-row items-center gap-6">
-            <div class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400">
-                <i data-lucide="lock" class="w-7 h-7"></i>
-            </div>
-            <div class="flex-1 text-center md:text-left">
-                <p class="text-[11px] font-black text-slate-800 uppercase tracking-widest mb-1">Acuerdo de Confidencialidad Estratégica</p>
-                <p class="text-slate-500 text-xs font-medium leading-relaxed max-w-2xl">Este panel es propiedad de Biotech Healthcare Iberia S.L. Contiene condiciones comerciales exclusivas para Grupo Baviera. Prohibida su difusión total o parcial.</p>
+        <footer class="mt-12 p-8 bg-white border border-slate-200 rounded-3xl flex items-center gap-6">
+            <i data-lucide="lock" class="w-7 h-7 text-slate-400"></i>
+            <div>
+                <p class="text-[11px] font-black text-slate-800 uppercase tracking-widest mb-1">Confidencial</p>
+                <p class="text-slate-500 text-xs font-medium">Uso exclusivo Gerencia Grupo Baviera.</p>
             </div>
         </footer>
     </div>
 
     <script>
-        // BASE DE DATOS DE PRODUCTOS CON NUEVOS PRECIOS
         const products = [
-            // FÁQUICAS (Sin cambios)
-            { cat: 'PHAKIC', name: 'Eyecryl Phakic Esférica', price: 400, desc: 'Esferas +10D a -25D. Tallas 12.0 a 13.5mm.', tag: null },
-            { cat: 'PHAKIC', name: 'Eyecryl Phakic Toric', price: 680, desc: 'Cilindros hasta +5.0D. Tallas 12.0 a 13.5mm.', tag: null },
-            { cat: 'PHAKIC', name: 'Eyecryl CUSTOM', price: 1250, desc: 'Tallas especiales (11/14.5) o rangos extremos.', tag: null },
+            // FÁQUICAS
+            { cat: 'FÁQUICAS', name: 'Eyecryl Phakic Esférica', price: 400, desc: 'Esferas +10D a -25D.', tag: null },
+            { cat: 'FÁQUICAS', name: 'Eyecryl Phakic Toric', price: 680, desc: 'Cilindros hasta +5.0D.', tag: null },
+            { cat: 'FÁQUICAS', name: 'Eyecryl CUSTOM', price: 1250, desc: 'Tallas especiales o rangos extremos.', tag: null },
             
-            // EDOF (Segmento EDOF a precio Mono Plus > 1000 uds)
-            { cat: 'EDOF', name: 'EYECRYL SERT (EDOF)', price: 105, desc: 'Precio Mono Plus (>1.000 uds anuales)', tag: 'Promoción' },
-            { cat: 'EDOF', name: 'EYECRYL SERT TORIC', price: 200, desc: 'Precio Mono Plus (>1.000 uds anuales)', tag: 'Promoción' },
-            
-            // TRIFOCAL (Segmento Trifocal a precio EDOF > 600 uds)
-            { cat: 'TRIFOCAL', name: 'OPTIFLEX TRIO', price: 280, desc: 'Precio Segmento EDOF (>600 uds anuales)', tag: 'Promoción' },
-            { cat: 'TRIFOCAL', name: 'OPTIFLEX TRIO TORIC', price: 350, desc: 'Precio Segmento EDOF (>600 uds anuales)', tag: 'Promoción' },
-            
-            // HÍBRIDAS / PREMIUM (Segmento Híbrido a precio Difractivo > 600 uds)
-            { cat: 'PREMIUM', name: 'OPTIFLEX TRIO PLUS', price: 330, desc: 'Precio Trifocal Difractivo (>600 uds anuales)', tag: 'Híbrida' },
-            { cat: 'PREMIUM', name: 'OPTIFLEX TRIO PLUS TORIC', price: 430, desc: 'Disponible próximamente bajo reserva.', tag: 'Híbrida' },
-            { cat: 'PREMIUM', name: 'OPTIFLEX XTENSE COMFORT PLUS', price: 330, desc: 'Precio Trifocal Difractivo (>600 uds anuales)', tag: 'Híbrida' },
-            { cat: 'PREMIUM', name: 'OPTIFLEX XTENSE COMFORT PLUS TORIC', price: 430, desc: 'Disponible próximamente bajo reserva.', tag: 'Híbrida' },
+            // LIO ESPECIALES
+            { cat: 'LIO EDOF', name: 'EYECRYL SERT (EDOF)', price: 105, desc: 'Compromiso > 1.000 uds.', tag: 'Promo Vol.' },
+            { cat: 'LIO EDOF', name: 'EYECRYL SERT TORIC', price: 200, desc: 'Compromiso > 1.000 uds.', tag: 'Promo Vol.' },
+            { cat: 'LIO TRIFOCAL', name: 'OPTIFLEX TRIO', price: 280, desc: 'Compromiso > 600 uds.', tag: 'Promo Vol.' },
+            { cat: 'LIO TRIFOCAL', name: 'OPTIFLEX TRIO TORIC', price: 350, desc: 'Compromiso > 600 uds.', tag: 'Promo Vol.' },
+            { cat: 'LIO PREMIUM', name: 'OPTIFLEX TRIO PLUS / XTENSE', price: 330, desc: 'Gama Híbrida (>600 uds).', tag: 'Híbrida' },
+            { cat: 'LIO PREMIUM', name: 'OPTIFLEX PLUS TORIC', price: 430, desc: 'Gama Híbrida Tórica.', tag: 'Híbrida' },
 
-            // MONOFOCALES
-            { cat: 'MONOFOCAL', name: 'GENESIS COMFORT NY', price: 55, desc: 'LIO Precargada con filtro amarillo.', tag: null },
-            { cat: 'MONOFOCAL', name: 'EYECRYL PLUS NATURAL HD', price: 45, desc: 'No precargada. High Definition.', tag: null }
+            // LIO MONOFOCALES
+            { cat: 'LIO MONOFOCAL', name: 'GENESIS COMFORT NY', price: 55, desc: 'LIO Precargada Amarilla.', tag: null },
+            { cat: 'LIO MONOFOCAL', name: 'EYECRYL PLUS NATURAL HD', price: 45, desc: 'LIO No precargada HD.', tag: null },
+
+            // VISCOELÁSTICOS
+            { cat: 'VISCOELÁSTICOS', name: 'BIO HYALUR 1% (1ml)', price: 9.90, desc: 'Hialuronato Sódico Cohesivo.', tag: 'Consumible' },
+            { cat: 'VISCOELÁSTICOS', name: 'BIO HYALUR PLUS 1.4% (1ml)', price: 10.80, desc: 'Alta Cohesividad.', tag: 'Consumible' },
+            { cat: 'VISCOELÁSTICOS', name: 'EYEVISC 2% (2ml)', price: 7.70, desc: 'HPMC (Dispersivo).', tag: 'Consumible' },
+
+            // COLORANTES
+            { cat: 'COLORANTES', name: 'BIO BLUE (0.06% Trypan Blue)', price: 8.20, desc: 'Cápsula anterior (0.5ml).', tag: 'Consumible' }
         ];
 
         function renderProducts() {
             const container = document.getElementById('product-list');
             container.innerHTML = products.map(p => `
-                <tr class="hover:bg-slate-50/50 transition-colors group">
+                <tr class="hover:bg-slate-50/50 transition-colors">
                     <td class="p-6">
-                        <div class="flex flex-col gap-1">
+                        <div class="flex flex-col">
                             <span class="text-sm font-black text-slate-900">${p.name}</span>
-                            <span class="text-[9px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-black w-fit uppercase">${p.cat}</span>
+                            <span class="text-[9px] text-slate-400 font-black uppercase">${p.cat}</span>
                         </div>
                     </td>
                     <td class="p-6">
                         <div class="flex items-center gap-3">
                             <span class="text-[10px] font-semibold text-slate-500">${p.desc}</span>
-                            ${p.tag ? `<span class="px-2 py-0.5 bg-blue-50 text-blue-600 text-[8px] font-black rounded uppercase border border-blue-100">${p.tag}</span>` : ''}
+                            ${p.tag ? `<span class="badge-promo">${p.tag}</span>` : ''}
                         </div>
                     </td>
                     <td class="p-6 text-right">
-                        <span class="text-xl font-black text-blue-700 tracking-tight">${p.price},00 €</span>
+                        <span class="text-xl font-black text-blue-700 tabular-nums">${p.price.toFixed(2).replace('.', ',')} €</span>
                     </td>
                 </tr>
             `).join('');
@@ -232,21 +178,12 @@
             document.getElementById(id).classList.add('active');
             document.getElementById('btn-' + id).classList.add('active');
             lucide.createIcons();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function updateSim() {
             const sales = parseInt(document.getElementById('sales-slider').value);
             document.getElementById('sales-val').innerText = sales.toLocaleString('es-ES');
-            
-            // Lógica de Rappel Baviera 2026
-            let rate = 0;
-            if (sales >= 300000) rate = 0.015;
-            if (sales >= 600000) rate = 0.02;
-            if (sales >= 1200000) rate = 0.03;
-            if (sales >= 1800000) rate = 0.04;
-            if (sales >= 2500000) rate = 0.05;
-            
+            let rate = sales >= 2500000 ? 0.05 : (sales >= 1200000 ? 0.03 : 0.015);
             document.getElementById('rappel-pct').innerText = (rate * 100).toFixed(1) + '%';
             document.getElementById('rappel-total').innerText = Math.round(sales * rate).toLocaleString('es-ES') + ' €';
         }
